@@ -9,7 +9,7 @@ const Footer = () => {
       <div style={styles.content}>
         <Row>
           <Col l="8">
-            <h3 style={styles.title}>关于我们</h3>
+            <h3 style={styles.title}>About Us</h3>
             <div style={styles.nav}>
               <a style={styles.link}>私权政策</a>
               <a style={styles.link}>加入我们</a>

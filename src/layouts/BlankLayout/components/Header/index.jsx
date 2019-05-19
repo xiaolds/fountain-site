@@ -25,16 +25,16 @@ export default class Header extends Component {
         <ul className={styles.nav}>
           <li className={styles.navItem}>
             <Link to="/" className={styles.activeNavItemLink}>
-              首页
+              Home
             </Link>
             <Link to="/" className={styles.navItemLink}>
-              解决方案
+              Solutions
             </Link>
             <Link to="/" className={styles.navItemLink}>
-              新闻动态
+              News
             </Link>
             <Link to="/" className={styles.navItemLink}>
-              关于我们
+              About Us
             </Link>
           </li>
         </ul>
