@@ -36,6 +36,9 @@ export default class Header extends Component {
             <Link to="/" className={styles.navItemLink}>
               About Us
             </Link>
+            <Link to="/" className={styles.navItemLink}>
+              For Test
+            </Link>
           </li>
         </ul>
       </div>
