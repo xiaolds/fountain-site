@@ -55,7 +55,10 @@
     "entry": "src/index.js",
     "output": {
       "publicPath": "./"
-    }
+    },
+    "mode": "production",
+    "devtool": "inline-source-map",
+    "localization": true
   },
   "scaffoldConfig": {
     "builder": "ice-scripts",
