@@ -2,9 +2,9 @@ import React, { Component } from 'react';
 import Banner from './components/Banner';
 import Introduction from './components/Introduction';
 import Feature from './components/Feature';
-import Data from './components/Data';
 import Solution from './components/Solution';
 import Resource from './components/Resource';
+import Video from './components/SimpleVideoPlayer1';
 
 export default class HomePage extends Component {
   static displayName = 'HomePage';
@@ -20,9 +20,9 @@ export default class HomePage extends Component {
         <Banner />
         <Introduction />
         <Feature />
-        <Data />
         <Solution />
         <Resource />
+        <Video />
       </div>
     );
   }
