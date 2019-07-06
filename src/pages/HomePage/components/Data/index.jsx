@@ -41,7 +41,6 @@ const styles = {
     padding: '80px 0',
   },
   content: {
-    width: '1200px',
     margin: '0 auto',
   },
   title: {

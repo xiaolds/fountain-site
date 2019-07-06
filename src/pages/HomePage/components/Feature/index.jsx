@@ -63,7 +63,6 @@ const styles = {
     background: '#F6F7F9',
   },
   content: {
-    width: '1200px',
     margin: '0 auto',
   },
   item: {

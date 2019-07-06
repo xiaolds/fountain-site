@@ -2,49 +2,70 @@ import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 
 import styles from './index.module.scss';
+
+const MENUS = [
+    {
+        name: 'Home',
+        path: '#index'
+    },
+    {
+        name: 'Solutions',
+        path: '#solutions'
+    },
+    {
+        name: 'News',
+        path: '#news'
+    },
+    {
+        name: 'AboutUs',
+        path: '#about'
+    }
+];
+
 export default class Header extends Component {
-  static displayName = 'Header';
+    static displayName = 'Header';
 
-  static propTypes = {};
+    static propTypes = {};
 
-  static defaultProps = {};
+    static defaultProps = {};
 
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
 
-  render() {
-    return (
-      <div className={styles.header}>
-        <div className={styles.logo}>
-          <Link to="/" className={styles.logoLink}>
-            LOGO
-          </Link>
-        </div>
-        <ul className={styles.nav}>
-          <li className={styles.navItem}>
-            <Link to="/" className={styles.activeNavItemLink}>
-              Home
-            </Link>
-            <Link to="/" className={styles.navItemLink}>
-              Solutions
-            </Link>
-            <Link to="/" className={styles.navItemLink}>
-              News
-            </Link>
-            <Link to="/" className={styles.navItemLink}>
-              About Us
-            </Link>
-            <Link to="/" className={styles.navItemLink}>
-              About Us
-            </Link>
-            <Link to="/" className={styles.navItemLink}>
-              About Us
-            </Link>
-          </li>
-        </ul>
-      </div>
-    );
-  }
+    isAvtive = route => {
+        const hash = document.location.hash;
+        return hash.indexOf(route.substring(1)) > -1;
+    };
+
+    render() {
+        return (
+            <div className={styles.header}>
+                <div className={styles.logo}>
+                    <Link to="/" className={styles.logoLink}>
+                        T.Y. Fountain
+                    </Link>
+                </div>
+                <ul className={styles.nav}>
+                    <li className={styles.navItem}>
+                        {MENUS.map((item, idx) => {
+                            const active = this.isAvtive(item.path);
+                            return (
+                                <a
+                                    key={idx}
+                                    className={
+                                        active ? styles.activeNavItemLink : styles.navItemLink
+                                    }
+                                    href={item.path}
+                                >
+                                    <span className="menu-title">{item.name}</span>
+                                </a>
+                            );
+                        })}
+                    </li>
+                </ul>
+            </div>
+        );
+    }
 }

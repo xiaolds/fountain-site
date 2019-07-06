@@ -7,23 +7,33 @@ import Resource from './components/Resource';
 import Video from './components/SimpleVideoPlayer1';
 
 export default class HomePage extends Component {
-  static displayName = 'HomePage';
+    static displayName = 'HomePage';
 
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
 
-  render() {
-    return (
-      <div>
-        <Banner />
-        <Introduction />
-        <Feature />
-        <Solution />
-        <Resource />
-        <Video />
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <div id="index" className="full-height display-flex">
+                    <Banner />
+                </div>
+                <Introduction />
+                <div id="solutions">
+                    <Solution />
+                </div>
+                <div id="news">
+                    <Resource />
+                </div>
+                <div id="about">
+                    <Video />
+                </div>
+                <div id="join">
+                    <Feature />
+                </div>
+            </div>
+        );
+    }
 }

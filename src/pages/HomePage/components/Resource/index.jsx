@@ -75,7 +75,6 @@ export default class Resource extends Component {
 
 const styles = {
   container: {
-    width: '1200px',
     padding: '80px 0',
     margin: '0 auto',
   },

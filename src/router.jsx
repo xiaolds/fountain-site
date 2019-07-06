@@ -10,7 +10,6 @@ const router = () => {
   return (
     <HashRouter>
       <Switch>
-        <Route path="/projects" component={Resource} />
         <Route path="/" component={BlankLayout} />
       </Switch>
     </HashRouter>

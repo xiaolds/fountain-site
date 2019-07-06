@@ -1,65 +1,42 @@
 import React, { Component } from 'react';
+import SwipeableViews from 'react-swipeable-views';
+import { autoPlay } from 'react-swipeable-views-utils';
+
+const AutoPlaySwipeableViews = autoPlay(SwipeableViews);
 
 export default class Banner extends Component {
-  static displayName = 'Banner';
+    static displayName = 'Banner';
 
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
 
-  render() {
-    return (
-      <div style={styles.container}>
-        <div style={styles.content}>
-          <div style={styles.title}>TY Fountain</div>
-          <div style={styles.desc}>Music Fountain & Make music fountain easier and professional</div>
-          <a style={styles.link}>Let's start</a>
-        </div>
-      </div>
-    );
-  }
+    render() {
+        return (
+            <div>
+                <div className="banner-content">
+                    <div className="banner-title">WE BRING THE GLAMOUROUS DREAM</div>
+                    <div className="banner-desc">
+                        T .Y. Fountain Canada specialized in unique water shows with spectacular
+                        effects. We design and creates magic with water, brining you the
+                        breathtaking heart-quake!
+                    </div>
+                    <a className="banner-link">explore</a>
+                </div>
+                <div className="banner-img-wrapper">
+                    <AutoPlaySwipeableViews
+                        className="banner-img"
+                        interval={4000}
+                        containerStyle={{ height: '100%' }}
+                    >
+                        <div className="banner-img img1" />
+                        <div className="banner-img img2" />
+                        <div className="banner-img img3" />
+                        <div className="banner-img img4" />
+                    </AutoPlaySwipeableViews>
+                </div>
+            </div>
+        );
+    }
 }
-
-const styles = {
-  container: {
-    background:
-      'url(https://img.alicdn.com/tfs/TB1Q7YOdMHqK1RjSZFgXXa7JXXa-2868-912.png)',
-    width: '100%',
-    height: '418px',
-    backgroundSize: 'cover',
-  },
-  content: {
-    width: '1200px',
-    margin: '0 auto',
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
-    justifyContent: 'center',
-  },
-  title: {
-    color: '#ffffff',
-    marginBottom: '24px',
-    fontWeight: '500',
-    fontSize: '52px',
-  },
-  desc: {
-    color: '#ffffff',
-    marginBottom: '24px',
-    fontSize: '28px',
-  },
-  link: {
-    border: '1px solid #fff',
-    fontSize: '14px',
-    width: '124px',
-    height: '40px',
-    lineHeight: '40px',
-    color: 'rgba(31,56,88,0.6)',
-    borderRadius: '18px',
-    padding: '0 16px',
-    backgroundColor: '#fff',
-    textAlign: 'center',
-    cursor: 'pointer',
-    textDecoration: 'none',
-  },
-};

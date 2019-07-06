@@ -4,39 +4,36 @@ import Header from './components/Header';
 import Footer from './components/Footer';
 import routerData from '../../routerConfig';
 import NotFound from '../../components/NotFound';
+import '../../common/main.scss';
 
 export default class NormalLayout extends Component {
-  static displayName = 'NormalLayout';
+    static displayName = 'NormalLayout';
 
-  static propTypes = {};
+    static propTypes = {};
 
-  static defaultProps = {};
+    static defaultProps = {};
 
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+    constructor(props) {
+        super(props);
+        this.state = {};
+    }
 
-  render() {
-    return (
-      <div>
-        <Header />
-        <Switch>
-          {routerData.map((item, index) => {
-            return item.component ? (
-              <Route
-                key={index}
-                path={item.path}
-                component={item.component}
-              />
-            ) : null;
-          })}
+    render() {
+        return (
+            <div className="main-wrapper">
+                <Header />
+                <Switch>
+                    {routerData.map((item, index) => {
+                        return item.component ? (
+                            <Route key={index} path={item.path} component={item.component} />
+                        ) : null;
+                    })}
 
-          {/* 未匹配到的路由重定向到 NotFound */}
-          <Route component={NotFound} />
-        </Switch>
-        <Footer />
-      </div>
-    );
-  }
+                    {/* 未匹配到的路由重定向到 NotFound */}
+                    <Route component={NotFound} />
+                </Switch>
+                <Footer />
+            </div>
+        );
+    }
 }
