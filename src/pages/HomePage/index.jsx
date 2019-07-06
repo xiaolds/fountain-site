@@ -1,10 +1,8 @@
 import React, { Component } from 'react';
 import Banner from './components/Banner';
 import Introduction from './components/Introduction';
-import Feature from './components/Feature';
-import Solution from './components/Solution';
-import Resource from './components/Resource';
-import Video from './components/SimpleVideoPlayer1';
+import FeatureDisplay from './components/FeatureDisplay';
+import SlideBanner from './components/SlideBanner';
 
 export default class HomePage extends Component {
     static displayName = 'HomePage';
@@ -20,18 +18,14 @@ export default class HomePage extends Component {
                 <div id="index" className="full-height display-flex">
                     <Banner />
                 </div>
-                <Introduction />
-                <div id="solutions">
-                    <Solution />
+                <div id="products">
+                    <SlideBanner />
                 </div>
-                <div id="news">
-                    <Resource />
+                <div id="services">
+                    <FeatureDisplay />
                 </div>
                 <div id="about">
-                    <Video />
-                </div>
-                <div id="join">
-                    <Feature />
+                    <Introduction />
                 </div>
             </div>
         );

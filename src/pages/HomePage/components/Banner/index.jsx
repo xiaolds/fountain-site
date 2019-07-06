@@ -22,7 +22,7 @@ export default class Banner extends Component {
                         effects. We design and creates magic with water, brining you the
                         breathtaking heart-quake!
                     </div>
-                    <a className="banner-link">explore</a>
+                    <a className="banner-link" href="#products">explore</a>
                 </div>
                 <div className="banner-img-wrapper">
                     <AutoPlaySwipeableViews

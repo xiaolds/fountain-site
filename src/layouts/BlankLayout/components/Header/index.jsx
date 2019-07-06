@@ -9,15 +9,15 @@ const MENUS = [
         path: '#index'
     },
     {
-        name: 'Solutions',
-        path: '#solutions'
+        name: 'Products',
+        path: '#products'
     },
     {
-        name: 'News',
-        path: '#news'
+        name: 'Services',
+        path: '#services'
     },
     {
-        name: 'AboutUs',
+        name: 'About',
         path: '#about'
     }
 ];
