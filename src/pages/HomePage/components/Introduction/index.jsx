@@ -12,7 +12,7 @@ export default class Introduction extends Component {
     render() {
         return (
             <div style={styles.container}>
-                <h3 style={styles.title}>About Us</h3>
+                <p className="page-title">About Us</p>
                 <p style={styles.desc}>
                     `blahblahblahblahblahblahblahblahblahblahblahblahblahblahblah`
                 </p>

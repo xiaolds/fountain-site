@@ -9,22 +9,31 @@ export default class HomePage extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {};
+        this.ref = {};
+    }
+
+    componentDidMount() {
+        const hash = document.location.hash.substring(2);
+        this.ref[hash] && this.ref[hash].scrollIntoView();
     }
 
     render() {
         return (
             <div>
-                <div id="index" className="full-height display-flex">
+                <div
+                    id="index"
+                    className="full-height display-flex"
+                    ref={el => (this.ref.index = el)}
+                >
                     <Banner />
                 </div>
-                <div id="products">
+                <div id="products" ref={el => (this.ref.products = el)}>
                     <SlideBanner />
                 </div>
-                <div id="services">
+                <div id="services" ref={el => (this.ref.services = el)}>
                     <FeatureDisplay />
                 </div>
-                <div id="about">
+                <div id="about" ref={el => (this.ref.about = el)}>
                     <Introduction />
                 </div>
             </div>

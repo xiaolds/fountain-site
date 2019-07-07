@@ -34,7 +34,7 @@ export default class SlideBanner extends Component {
                 <p className="page-title">What We Can Do</p>
                 <div className="hy-friends-list">
                     <a
-                        href="#"
+                        href="#service"
                         className={`hy-friends-item ${selectedIndex === 0 ? 'selected' : ''}`}
                         data-index="0"
                         onMouseEnter={this.onMouseEnter}
@@ -48,7 +48,7 @@ export default class SlideBanner extends Component {
                     </a>
 
                     <a
-                        href="#"
+                        href="#service"
                         className={`hy-friends-item ${selectedIndex === 1 ? 'selected' : ''}`}
                         data-index="1"
                         onMouseEnter={this.onMouseEnter}
@@ -62,7 +62,7 @@ export default class SlideBanner extends Component {
                     </a>
 
                     <a
-                        href="#"
+                        href="#service"
                         className={`hy-friends-item ${selectedIndex === 2 ? 'selected' : ''}`}
                         data-index="2"
                         onMouseEnter={this.onMouseEnter}

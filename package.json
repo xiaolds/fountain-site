@@ -13,7 +13,7 @@
     ".eslintrc"
   ],
   "dependencies": {
-    "@alifd/next": "^1.x",
+    "@alifd/next": "^1.15.11",
     "@antv/data-set": "^0.9.6",
     "@fortawesome/fontawesome-svg-core": "^1.2.19",
     "@fortawesome/free-solid-svg-icons": "^5.9.0",

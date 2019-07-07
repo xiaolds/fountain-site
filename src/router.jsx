@@ -7,13 +7,14 @@ import BlankLayout from './layouts/BlankLayout';
 import Resource from './pages/HomePage/components/Resource';
 
 const router = () => {
-  return (
-    <HashRouter>
-      <Switch>
-        <Route path="/" component={BlankLayout} />
-      </Switch>
-    </HashRouter>
-  );
+    return (
+        <HashRouter>
+            <Switch>
+                <Route path="/service" component={Resource} />
+                <Route path="/" component={BlankLayout} />
+            </Switch>
+        </HashRouter>
+    );
 };
 
 export default router();
