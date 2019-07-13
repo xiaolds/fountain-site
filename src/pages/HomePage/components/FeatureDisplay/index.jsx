@@ -25,14 +25,22 @@ export default class FeatureDisplayFeatureDisplay extends Component {
         return charts;
     };
 
-    handleGoService = (title) => {
-        sessionStorage && sessionStorage.setItem('ty-fountain-service', title)
-    }
+    handleGoService = title => {
+        sessionStorage && sessionStorage.setItem('ty-fountain-service', title);
+    };
+
+    goServiceDetail = () => {
+        this.handleGoService(config.data[0].title);
+        const origin = window.location.origin;
+        window.location.href = `${origin}/#/service?solutions`;
+    };
 
     render() {
         return (
             <div className="pt100">
-                <p className="page-title">Services & Solutions</p>
+                <p className="page-title" onClick={this.goServiceDetail}>
+                    Services & Solutions
+                </p>
                 <div className={styles.container}>
                     <div className={styles.items}>
                         <Row gutter="20" wrap>
@@ -49,7 +57,11 @@ export default class FeatureDisplayFeatureDisplay extends Component {
                                             <p className="description">
                                                 {this.limitCharts(item.description)}
                                             </p>
-                                            <a className="link" href="#service" onClick={()=>this.handleGoService(item.title)}>
+                                            <a
+                                                className="link"
+                                                href="#service?solutions"
+                                                onClick={() => this.handleGoService(item.title)}
+                                            >
                                                 More
                                             </a>
                                         </div>

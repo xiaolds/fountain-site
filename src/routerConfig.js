@@ -3,7 +3,8 @@
 // 变量名 routerConfig 为 iceworks 检测关键字，请不要修改名称
 
 import HomePage from './pages/HomePage';
-import Resource from './pages/HomePage/components/Resource';
+import asyncComponent from "./components/AsyncComponent";
+const Resource = asyncComponent(() => import("./pages/HomePage/components/Resource"));
 
 const routerConfig = [
   {

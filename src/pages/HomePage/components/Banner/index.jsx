@@ -18,11 +18,10 @@ export default class Banner extends Component {
                 <div className="banner-content">
                     <div className="banner-title">WE BRING THE GLAMOUROUS DREAM</div>
                     <div className="banner-desc">
-                        T .Y. Fountain Canada specialized in unique water shows with spectacular
+                        T .Y. Fountain specialized in unique water shows with spectacular
                         effects. We design and creates magic with water, brining you the
                         breathtaking heart-quake!
                     </div>
-                    <a className="banner-link" href="#products">explore</a>
                 </div>
                 <div className="banner-img-wrapper">
                     <AutoPlaySwipeableViews

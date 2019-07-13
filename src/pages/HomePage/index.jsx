@@ -1,9 +1,11 @@
-import React, { Component } from 'react';
+import React, { Component, lazy, Suspense } from 'react';
 import Banner from './components/Banner';
-import Introduction from './components/Introduction';
-import FeatureDisplay from './components/FeatureDisplay';
-import SlideBanner from './components/SlideBanner';
 
+const SlideBanner = lazy(() => import('./components/SlideBanner'));
+const FeatureDisplay = lazy(() => import('./components/FeatureDisplay'));
+const Introduction = lazy(() => import('./components/Introduction'));
+const OurTurn = lazy(() => import('./components/Introduction/OurTurn'));
+const Project = lazy(() => import('./components/Project'));
 export default class HomePage extends Component {
     static displayName = 'HomePage';
 
@@ -22,19 +24,35 @@ export default class HomePage extends Component {
             <div>
                 <div
                     id="index"
-                    className="full-height display-flex"
+                    className="full-height display-flex w1200 main-wrapper"
                     ref={el => (this.ref.index = el)}
                 >
                     <Banner />
                 </div>
+                <div className="w1200 main-wrapper">
+                    <Suspense fallback={<h1>Still Loading…</h1>}>
+                        <OurTurn />
+                    </Suspense>
+                </div>
                 <div id="products" ref={el => (this.ref.products = el)}>
-                    <SlideBanner />
+                    <Suspense fallback={<h1>Still Loading…</h1>}>
+                        <SlideBanner />
+                    </Suspense>
                 </div>
                 <div id="services" ref={el => (this.ref.services = el)}>
-                    <FeatureDisplay />
+                    <Suspense fallback={<h1>Still Loading…</h1>}>
+                        <FeatureDisplay />
+                    </Suspense>
+                </div>
+                <div id="projects" ref={el => (this.ref.projects = el)}>
+                    <Suspense fallback={<h1>Still Loading…</h1>}>
+                        <Project />
+                    </Suspense>
                 </div>
                 <div id="about" ref={el => (this.ref.about = el)}>
-                    <Introduction />
+                    <Suspense fallback={<h1>Still Loading…</h1>}>
+                        <Introduction />
+                    </Suspense>
                 </div>
             </div>
         );

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import Feature from '../Feature';
 
 export default class Introduction extends Component {
     static displayName = 'Introduction';
@@ -12,17 +11,26 @@ export default class Introduction extends Component {
     render() {
         return (
             <div style={styles.container}>
-                <p className="page-title">About Us</p>
-                <p style={styles.desc}>
-                    `blahblahblahblahblahblahblahblahblahblahblahblahblahblahblah`
-                </p>
-                <p style={styles.desc}>
-                    `blahblahblahblahblahblahblahblahblahblahblahblahblahblahblah`
-                </p>
-                <p style={styles.desc}>
-                    `blahblahblahblahblahblahblahblahblahblahblahblahblahblahblah`
-                </p>
-                <Feature />
+                <p className="page-title">About T.Y. Fountain</p>
+                <div className="contact-bg">
+                    <div className="w1200 main-wrapper">
+                        <h1 className="contact-txt">
+                            {`The BEST FOUNTAIN EXPERTS  
+                          YOU EVER NEED`}
+                        </h1>
+                        <a href="#contact" className="banner-link">
+                            CONTACT US
+                        </a>
+                    </div>
+                </div>
+
+                {/* <iframe
+                    src="https://zao.taobao.com/vrimage/preview?userId=17381151964&amp;bizId=23148568&amp;type=cgs"
+                    allowfullscreen="allowfullscreen"
+                    data-rocket-lazyload="fitvidscompatible"
+                    data-lazy-src="https://zao.taobao.com/vrimage/preview?userId=17381151964&amp;bizId=23148568&amp;type=cgs"
+                    data-was-processed="true"
+                /> */}
             </div>
         );
     }
@@ -45,6 +53,6 @@ const styles = {
         color: 'rgba(0,0,0,.6)',
         fontSize: '14px',
         lineHeight: '30px',
-        textAlign: 'center',
+        textAlign: 'center'
     }
 };

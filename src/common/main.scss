@@ -1,7 +1,10 @@
 .main-wrapper {
+    margin: 0 auto;
+}
+
+.w1200 {
     width: 1200px;
     min-width: 1200px;
-    margin: 0 auto;
 }
 
 .full-height {
@@ -43,15 +46,14 @@
 }
 
 .banner-link {
+    padding: 8px;
     border: 1px solid #fff;
     font-size: 14px;
-    font-weight: 500;
     width: 124px;
     height: 40px;
     line-height: 40px;
     color: $color-brand1-6;
-    border-radius: 18px;
-    padding: 0 16px;
+    border-radius: 4px;
     background-color: #fff;
     text-align: center;
     cursor: pointer;
@@ -169,6 +171,9 @@
 .d-10 {
     background: url('./img/d-10.jpg') center / contain no-repeat;
 }
+.thumb-1 {
+    background: url('./img/thumb-1.jpg') center / contain no-repeat;
+}
 
 .pt100 {
     padding-top: 100px;
@@ -179,7 +184,7 @@
 }
 
 .ft16 {
-    font-size: 16px !important
+    font-size: 16px !important;
 }
 
 .pagination {
@@ -201,6 +206,7 @@
 
 .page-title {
     font-size: 30px;
+    color: $color-brand1-6;
     font-weight: 700;
     text-align: center;
     margin-bottom: 60px;
@@ -218,11 +224,31 @@
     }
 }
 
-.description{
+.page-title-with-txt {
+    font-size: 30px;
+    color: $color-brand1-6;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+}
+
+.title-txt {
+    color: #999;
+}
+
+.fw-6 {
+    font-weight: 600;
+}
+
+.tc {
+    text-align: center;
+}
+
+.description {
     font-size: 13px;
     line-height: 22px;
     color: #999;
-  };
+}
 
 .service-detail-wrapper {
     width: 100%;
@@ -236,14 +262,28 @@
     width: 900px;
 }
 
-.foot-wrapper {
-    padding: 50px;
-    background: #475268;
-    color: #fff;
+@mixin full-width {
     position: absolute;
     left: 0;
     right: 0;
     min-width: 1200px;
+}
+
+.foot-wrapper {
+    @include full-width;
+    padding: 50px;
+    background: #475268;
+    color: #fff;
+}
+
+.contact-bg {
+    height: 424px;
+    padding: 80px;
+    background: url('./img/contact-bg.jpg') center / cover no-repeat;
+}
+
+.contact-txt {
+    color: #fff;
 }
 
 // mobile style

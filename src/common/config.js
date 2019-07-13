@@ -48,6 +48,44 @@ We will arrange the shipment according to your request and make sure the product
     }
 ];
 
+const productDatas = [
+    {
+        title: 'Home Fountain',
+        description: `In the field of decorative design, water is one of the most lively and inspiring elements. The yearning towards the nature is growing stronger against modernization. Getting back to simplicity and embracing the nature has become a desire of many people. Home Fountain happens to be a satisfaction of this desire. It becomes the emotional bond people could easily have with the nature. Water brings the spirit of the nature to our home while it becomes an artwork of our life.`,
+        imgs: ['as-1']
+    },
+    {
+        title: 'Garden Fountain',
+        description: `Water attracts people; Water makes landscape alive. Water can be soft, can be hard; can be virtual, can be real; can be rapid, and can be slow too. In combined garden landscape, water frames different construction environment. By combining other facilities, beauty of water could be presented in different garden designs. Water is the source of life: it makes a garden more than a container of visual feast; it gives a soul; and make the entire garden breath and grow.
+        Every fountain consists of a series of nozzles, underwater luminaires, pumps, control systems and various other components, but these parts are not just simple pieces of metal. Every fountain component is a marvelous piece of engineering, design and functionality; elaborately devised, precisely engineered and exhaustively tested under the harshest conditions to make sure it will give the water owing through it the exact form we want – for decades to come. `,
+        imgs: ['as-1']
+    },
+    {
+        title: 'Water Fountain',
+        description: `In the field of decorative design, water is one of the most lively and inspiring elements. The yearning towards the nature is growing stronger against modernization. Getting back to simplicity and embracing the nature has become a desire of many people. Home Fountain happens to be a satisfaction of this desire. It becomes the emotional bond people could easily have with the nature. Water brings the spirit of the nature to our home while it becomes an artwork of our life.You will find a wide selection of carefully designed fountain shapes, made of the highest quality materials and delivered pre-fabricated, pre-wired, ready for installation. The best part? The feature all new technologies like LED illumination and a set of handy features that will make your life easier. Installation is fast & easy without requiring special experience or skill - it is more like taking the system out of its packaging, putting it inside the basin and plugging the cables. No matter how complex the fountain pattern you choose is, we have simplied the process of installation as much as possible, saving you money, time and effort. Time has changed, water is no longer a silent & secrete existence. We are transforming static water into dynamic, pouring soul into it, and companioning it with multiple lighting effects. In this way, water fountain could "buffer" the solid buildings, "soft" the hard ground, and contribute more vitality to the environment. It satisfies the affection for water in human nature, makes water human's soul mate. With it, cities are not stiff anymore, and life is fulfilled by happiness.
+        All standardised products can be customized according to customer requirements (e.g. 316 stainless steel, longer cable lengths, alternate mounting systems or spray patterns). If however, you are looking for a unique water effect, nozzle, luminaire or anything related to water, We also creates custom products. We have designed and manufactured extraordinary fountain equipment numerous times. `,
+        imgs: ['as-1']
+    },
+    {
+        title: 'Water Curtain',
+       description: `We are born for creating the art of nature. Water is no longer captured by vessels; it can present the words and patterns with our water curtain. Water curtain is so wonderful that it could attract all the attention. Therefore, it has become a new favorite in commercial promotion; it brings infinite fun and vitality to interior environment, and fashion to plazas and parks.`,
+       imgs: ['']
+    },
+    {
+        title: 'Water Screen',
+       description: `3D Water Screen Show is a feast combined with science and creativity. It has overcome all traditional water screen movie. The most fashionable & shocking glass-free 3D technology and colorful laser light are used in the 3D Water Screen Show. The visual penetrability of water screen makes the projected images stereo; unpredicted laser movement and high-power sound effect integrates the images with the environment. This kind of city art uses buildings and sky as background, and takes people's imagination to the night sky. The wonderful charm it has is enough to make a whole city crazy, and reveals the character and legend of the city. 
+       The Water Screen is ideal for Laser or Video Projection with incredible water particles density and therefore projection capabilities. In day-time, the Water Screen is a beautiful, massive water shape but at night even when simply illuminated by the vivid underwater luminaires, it is an awe-inspiring magical spectacle. In low ambient-light conditions, the screen becomes completely transparent and only the spots pointed by the laser / projector are visible creating a holographic-like effect. 
+       `,
+       imgs: ['']
+    },
+    {
+        title: 'Music Fountain',
+       description: `This is what a fountain, actually is. A way to deeply involve with the spectator through the most fundamental and fascinating substance on earth. Every fountain has a unique character; it might convey tranquility, it might be a work of art, it might trigger one’s imagination through its perpetual liquid motion, or it can be a mind-blowing extravaganza with massive volumes of water, impressive light shows and even fire, all dancing to music, following a dramatic choreography. It can essentially be anything – anything that one can imagine of. Our job is to turn extraordinary ideas into marvelous fountains. We have our own proposals but we can also turn your idea into a liquid piece of art. `,
+       imgs: ['']
+    },
+];
+
 export default {
-    data
+    data,
+    productDatas
 };

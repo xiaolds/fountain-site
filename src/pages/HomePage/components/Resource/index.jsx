@@ -15,13 +15,18 @@ export default class Resource extends Component {
             index: 0,
             activeKey:
                 (sessionStorage && sessionStorage.getItem('ty-fountain-service')) ||
-                'Fountain Design'
+                (this.isServicePage() ? 'Fountain Design' : 'Home Fountain')
         };
     }
 
+    isServicePage = () => {
+        const hash = window.location.hash;
+        const search = hash.substring(hash.indexOf('?'));
+        return search.indexOf('solutions') > -1;
+    };
+
     componentDidMount() {
         this.ref.scrollIntoView();
-        sessionStorage && sessionStorage.getItem('ty-fountain-service');
     }
 
     renderPagination = total => {
@@ -45,6 +50,7 @@ export default class Resource extends Component {
 
     render() {
         const { index, activeKey } = this.state;
+        const configData = this.isServicePage() ? config.data : config.productDatas;
         return (
             <div>
                 <Header />
@@ -56,7 +62,7 @@ export default class Resource extends Component {
                             onChange={this.onChange}
                             activeKey={activeKey}
                         >
-                            {config.data.map(item => (
+                            {configData.map(item => (
                                 <Tab.Item title={item.title} key={item.title}>
                                     <SwipeableViews
                                         index={index}

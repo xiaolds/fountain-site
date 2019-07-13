@@ -4,7 +4,8 @@
 import React from 'react';
 import { HashRouter, Switch, Route } from 'react-router-dom';
 import BlankLayout from './layouts/BlankLayout';
-import Resource from './pages/HomePage/components/Resource';
+import asyncComponent from "./components/AsyncComponent";
+const Resource = asyncComponent(() => import("./pages/HomePage/components/Resource"));
 
 const router = () => {
     return (
