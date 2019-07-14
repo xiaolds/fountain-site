@@ -41,7 +41,11 @@
       }
       &.pro3 {
         background-image: url('./images/pro3.png');
-        background-size: contain;
+        background-size: cover;
+      }
+      &.pro4 {
+        background-image: url('./images/pro4.jpg');
+        background-size: cover;
       }
     }
     h4 {

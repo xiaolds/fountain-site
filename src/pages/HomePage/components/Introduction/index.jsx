@@ -8,10 +8,15 @@ export default class Introduction extends Component {
         this.state = {};
     }
 
+    goServiceDetail = () => {
+        const origin = window.location.origin;
+        window.location.href = `${origin}/#/contact`;
+    };
+
     render() {
         return (
             <div style={styles.container}>
-                <p className="page-title">About T.Y. Fountain</p>
+                <p className="page-title" onClick={this.goServiceDetail}>About T.Y. Fountain</p>
                 <div className="contact-bg">
                     <div className="w1200 main-wrapper">
                         <h1 className="contact-txt">
@@ -23,14 +28,6 @@ export default class Introduction extends Component {
                         </a>
                     </div>
                 </div>
-
-                {/* <iframe
-                    src="https://zao.taobao.com/vrimage/preview?userId=17381151964&amp;bizId=23148568&amp;type=cgs"
-                    allowfullscreen="allowfullscreen"
-                    data-rocket-lazyload="fitvidscompatible"
-                    data-lazy-src="https://zao.taobao.com/vrimage/preview?userId=17381151964&amp;bizId=23148568&amp;type=cgs"
-                    data-was-processed="true"
-                /> */}
             </div>
         );
     }

@@ -211,6 +211,7 @@
     text-align: center;
     margin-bottom: 60px;
     position: relative;
+    cursor: pointer;
     &::before {
         bottom: -20px;
         content: '';
@@ -270,10 +271,13 @@
 }
 
 .foot-wrapper {
-    @include full-width;
     padding: 50px;
     background: #475268;
     color: #fff;
+}
+
+.light-bg {
+    background: #F6F7F9;    
 }
 
 .contact-bg {
@@ -284,6 +288,12 @@
 
 .contact-txt {
     color: #fff;
+}
+
+.para-wrapper {
+    width: 800px;
+    height: 600px;
+    margin: 0 auto;
 }
 
 // mobile style

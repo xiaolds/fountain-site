@@ -12,7 +12,7 @@ module.exports = {
         ],
         'ice-plugin-css-assets-local'
     ],
-    chainWebpack: config => {
+    /* chainWebpack: config => {
         config // 定义插件名称
             .plugin('BundleAnalyzerPlugin')
             // 第一项为具体插件，第二项为插件参数
@@ -20,5 +20,5 @@ module.exports = {
         config.optimization.splitChunks({
             chunks: 'all'
         });
-    }
+    } */
 };
