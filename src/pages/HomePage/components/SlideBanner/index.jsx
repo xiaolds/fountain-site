@@ -27,18 +27,29 @@ export default class SlideBanner extends Component {
         }
     };
 
+    handleGoService = title => {
+        sessionStorage && sessionStorage.setItem('ty-fountain-service', title);
+    };
+
+    goServiceDetail = () => {
+        this.handleGoService('Home Fountain');
+        const origin = window.location.origin;
+        window.location.href = `${origin}/#/service?products`;
+    };
+
     render() {
         const { selectedIndex } = this.state;
         return (
             <div className="pt100">
-                <p className="page-title">What We Can Do</p>
+                <p className="page-title" onClick={this.goServiceDetail}>What We Can Do</p>
                 <div className="light-bg">
                     <div className="hy-friends-list">
                         <a
-                            href="#service?pros"
+                            href="#service?products"
                             className={`hy-friends-item ${selectedIndex === 0 ? 'selected' : ''}`}
                             data-index="0"
                             onMouseEnter={this.onMouseEnter}
+                            onClick={() => this.handleGoService('Water Screen')}
                         >
                             <div className="hy-friends-img pro1" />
                             <h4>Water Screen</h4>
@@ -49,10 +60,11 @@ export default class SlideBanner extends Component {
                         </a>
 
                         <a
-                            href="#service?pros"
+                            href="#service?products"
                             className={`hy-friends-item ${selectedIndex === 1 ? 'selected' : ''}`}
                             data-index="1"
                             onMouseEnter={this.onMouseEnter}
+                            onClick={() => this.handleGoService('Water Curtain')}
                         >
                             <div className="hy-friends-img pro2" />
                             <h4>Water Curtain</h4>
@@ -63,10 +75,11 @@ export default class SlideBanner extends Component {
                         </a>
 
                         <a
-                            href="#service?pros"
+                            href="#service?products"
                             className={`hy-friends-item ${selectedIndex === 2 ? 'selected' : ''}`}
                             data-index="2"
                             onMouseEnter={this.onMouseEnter}
+                            onClick={() => this.handleGoService('Water Fountain')}
                         >
                             <div className="hy-friends-img pro3" />
                             <h4>Water Fountain</h4>
@@ -76,10 +89,11 @@ export default class SlideBanner extends Component {
                             </p>
                         </a>
                         <a
-                            href="#service?pros"
+                            href="#service?products"
                             className={`hy-friends-item ${selectedIndex === 3 ? 'selected' : ''}`}
                             data-index="3"
                             onMouseEnter={this.onMouseEnter}
+                            onClick={() => this.handleGoService('Music Fountain')}                        
                         >
                             <div className="hy-friends-img pro4" />
                             <h4>Music Fountain</h4>

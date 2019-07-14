@@ -172,7 +172,218 @@
     background: url('./img/d-10.jpg') center / contain no-repeat;
 }
 .thumb-1 {
-    background: url('./img/thumb-1.jpg') center / contain no-repeat;
+    background: url('./img/thumb-1.jpg') center / cover no-repeat;
+}
+.thumb-2 {
+    background: url('./img/thumb-2.jpg') center / cover no-repeat;
+}
+.thumb-3 {
+    background: url('./img/thumb-3.jpg') center / cover no-repeat;
+}
+.thumb-4 {
+    background: url('./img/thumb-4.jpg') center / cover no-repeat;
+}
+.thumb-5 {
+    background: url('./img/thumb-5.jpg') center / cover no-repeat;
+}
+.thumb-6 {
+    background: url('./img/thumb-6.jpg') center / cover no-repeat;
+}
+.hf-1 {
+    background: url('./img/Home/1.jpg') center / contain no-repeat;
+}
+.hf-2 {
+    background: url('./img/Home/2.jpg') center / contain no-repeat;
+}
+.hf-3 {
+    background: url('./img/Home/3.jpg') center / contain no-repeat;
+}
+.hf-4 {
+    background: url('./img/Home/4.jpg') center / contain no-repeat;
+}
+.hf-5 {
+    background: url('./img/Home/5.jpg') center / contain no-repeat;
+}
+.hf-7 {
+    background: url('./img/Home/7.jpg') center / contain no-repeat;
+}
+.hf-11 {
+    background: url('./img/Home/11.jpg') center / contain no-repeat;
+}
+.hf-13 {
+    background: url('./img/Home/13.jpg') center / contain no-repeat;
+}
+.hf-14 {
+    background: url('./img/Home/14.jpg') center / contain no-repeat;
+}
+.gf-1 {
+    background: url('./img/Garden/1.jpg') center / contain no-repeat;
+}
+.gf-3 {
+    background: url('./img/Garden/3.jpg') center / contain no-repeat;
+}
+.gf-5 {
+    background: url('./img/Garden/5.jpg') center / contain no-repeat;
+}
+.gf-6 {
+    background: url('./img/Garden/6.jpg') center / contain no-repeat;
+}
+.gf-8 {
+    background: url('./img/Garden/8.jpg') center / contain no-repeat;
+}
+.gf-9 {
+    background: url('./img/Garden/9.jpg') center / contain no-repeat;
+}
+.gf-11 {
+    background: url('./img/Garden/11.jpg') center / contain no-repeat;
+}
+.gf-12 {
+    background: url('./img/Garden/12.jpg') center / contain no-repeat;
+}
+.gf-13 {
+    background: url('./img/Garden/13.jpg') center / contain no-repeat;
+}
+.gf-15 {
+    background: url('./img/Garden/15.jpg') center / contain no-repeat;
+}
+.gf-16 {
+    background: url('./img/Garden/1.jpg') center / contain no-repeat;
+}
+.wf-1 {
+    background: url('./img/WaterF/1.jpg') center / contain no-repeat;
+}
+.wf-2 {
+    background: url('./img/WaterF/2.jpg') center / contain no-repeat;
+}
+.wf-3 {
+    background: url('./img/WaterF/3.jpg') center / contain no-repeat;
+}
+.wf-4 {
+    background: url('./img/WaterF/4.jpg') center / contain no-repeat;
+}
+.wf-5 {
+    background: url('./img/WaterF/5.jpg') center / contain no-repeat;
+}
+.wf-7 {
+    background: url('./img/WaterF/7.jpg') center / contain no-repeat;
+}
+.wf-8 {
+    background: url('./img/WaterF/8.jpg') center / contain no-repeat;
+}
+.wf-9 {
+    background: url('./img/WaterF/9.jpg') center / contain no-repeat;
+}
+.wf-10 {
+    background: url('./img/WaterF/10.jpg') center / contain no-repeat;
+}
+.wf-12 {
+    background: url('./img/WaterF/12.jpg') center / contain no-repeat;
+}
+.wf-16 {
+    background: url('./img/WaterF/16.jpg') center / contain no-repeat;
+}
+.wf-14 {
+    background: url('./img/WaterF/14.jpg') center / contain no-repeat;
+}
+.wf-15 {
+    background: url('./img/WaterF/15.jpg') center / contain no-repeat;
+}
+.wc-1 {
+    background: url('./img/WaterC/1.jpg') center / contain no-repeat;
+}
+.wc-3 {
+    background: url('./img/WaterC/3.jpg') center / contain no-repeat;
+}
+.wc-2 {
+    background: url('./img/WaterC/2.jpg') center / contain no-repeat;
+}
+.wc-4 {
+    background: url('./img/WaterC/4.jpg') center / contain no-repeat;
+}
+.wc-5 {
+    background: url('./img/WaterC/5.jpg') center / contain no-repeat;
+}
+.wc-6 {
+    background: url('./img/WaterC/6.jpg') center / contain no-repeat;
+}
+.wc-7 {
+    background: url('./img/WaterC/7.jpg') center / contain no-repeat;
+}
+.wc-8{
+    background: url('./img/WaterC/8.jpg') center / contain no-repeat;
+}
+.wc-9 {
+    background: url('./img/WaterC/9.jpg') center / contain no-repeat;
+}
+.wc-10 {
+    background: url('./img/WaterC/10.jpg') center / contain no-repeat;
+}
+.wc-11 {
+    background: url('./img/WaterC/11.jpg') center / contain no-repeat;
+}
+.wc-12 {
+    background: url('./img/WaterC/12.jpg') center / contain no-repeat;
+}
+
+.ws-1 {
+    background: url('./img/WaterS/1.jpg') center / contain no-repeat;
+}
+.ws-2 {
+    background: url('./img/WaterS/2.jpg') center / contain no-repeat;
+}
+.ws-3 {
+    background: url('./img/WaterS/3.jpg') center / contain no-repeat;
+}
+.ws-4 {
+    background: url('./img/WaterS/4.jpg') center / contain no-repeat;
+}
+.ws-5 {
+    background: url('./img/WaterS/5.jpg') center / contain no-repeat;
+}
+.ws-6 {
+    background: url('./img/WaterS/6.jpg') center / contain no-repeat;
+}
+.ws-7 {
+    background: url('./img/WaterS/7.jpg') center / contain no-repeat;
+}
+.ws-8 {
+    background: url('./img/WaterS/8.jpg') center / contain no-repeat;
+}
+.ws-9 {
+    background: url('./img/WaterS/9.jpg') center / contain no-repeat;
+}
+.mf-1 {
+    background: url('./img/MusicF/1.jpg') center / contain no-repeat;
+}
+.mf-2 {
+    background: url('./img/MusicF/2.jpg') center / contain no-repeat;
+}
+.mf-3 {
+    background: url('./img/MusicF/3.jpg') center / contain no-repeat;
+}
+.mf-4 {
+    background: url('./img/MusicF/4.jpg') center / contain no-repeat;
+}
+.mf-5 {
+    background: url('./img/MusicF/5.jpg') center / contain no-repeat;
+}
+.mf-6 {
+    background: url('./img/MusicF/6.jpg') center / contain no-repeat;
+}
+.mf-7 {
+    background: url('./img/MusicF/7.jpg') center / contain no-repeat;
+}
+.mf-8 {
+    background: url('./img/MusicF/8.jpg') center / contain no-repeat;
+}
+.mf-9 {
+    background: url('./img/MusicF/9.jpg') center / contain no-repeat;
+}
+.mf-10 {
+    background: url('./img/MusicF/10.jpg') center / contain no-repeat;
+}
+.mf-11 {
+    background: url('./img/MusicF/11.jpg') center / contain no-repeat;
 }
 
 .pt100 {

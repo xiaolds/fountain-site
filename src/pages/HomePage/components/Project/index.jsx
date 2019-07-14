@@ -8,19 +8,19 @@ const dataSource = [
         img: 'thumb-1'
     },
     {
-        img: 'thumb-1'
+        img: 'thumb-2'
     },
     {
-        img: 'thumb-1'
+        img: 'thumb-3'
     },
     {
-        img: 'thumb-1'
+        img: 'thumb-4'
     },
     {
-        img: 'thumb-1'
+        img: 'thumb-5'
     },
     {
-        img: 'thumb-1'
+        img: 'thumb-6'
     }
 ];
 
@@ -63,7 +63,7 @@ const styles = {
     item: {
         width: '260px',
         height: '220px',
-        padding: '10px',
+        margin: '10px',
         display: 'inline-block'
     },
     silder: {
