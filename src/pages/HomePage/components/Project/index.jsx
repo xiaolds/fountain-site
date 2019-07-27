@@ -1,7 +1,5 @@
 import React, { Component } from 'react';
-import { Grid } from '@alifd/next';
-
-const { Row, Col } = Grid;
+import config from '../../../../common/config';
 
 const dataSource = [
     {
@@ -36,14 +34,40 @@ export default class Feature extends Component {
         this.state = {};
     }
 
+    handleGoService = title => {
+        sessionStorage && sessionStorage.setItem('ty-fountain-project', title);
+    };
+
+    goServiceDetail = title => {
+        this.handleGoService(title || config.projectsData[0].title);
+        
+        const { setProps } = this.props;
+        if (setProps) {
+            setProps(title);
+        } else {
+            const origin = window.location.origin;
+            window.location.href = `${origin}/#/project`;
+        }
+    };
+
     render() {
+        const dataSource = config.projectsData;
         return (
             <div className="pt100">
-                <p className="page-title">Recent Projects</p>
+                <p className="page-title" onClick={this.goServiceDetail}>
+                    Recent Projects
+                </p>
                 <div style={styles.container}>
                     <div style={styles.silder} className="w1200 main-wrapper">
                         {dataSource.map((item, index) => {
-                            return <div key={index} style={styles.item} className={`${item.img}`} />;
+                            return (
+                                <div
+                                    key={index}
+                                    style={styles.item}
+                                    className={`${item.thumb}`}
+                                    onClick={() => this.goServiceDetail(item.title)}
+                                />
+                            );
                         })}
                     </div>
                 </div>

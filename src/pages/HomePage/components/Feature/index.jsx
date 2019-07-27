@@ -1,12 +1,5 @@
 import React, { Component } from 'react';
 import { Grid } from '@alifd/next';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import {
-    faLocationArrow,
-    faEnvelope,
-    faPhoneAlt,
-    faClock
-} from '@fortawesome/free-solid-svg-icons';
 
 const { Row, Col } = Grid;
 
@@ -52,7 +45,6 @@ export default class Feature extends Component {
                     {dataSource.map((item, index) => {
                         return (
                             <Col xxs="12" s="6" l="6" key={index} style={styles.item}>
-                                <FontAwesomeIcon icon={item.pic} className="icon" size="3x" />
                                 <h3 style={styles.title}>{item.title}</h3>
                                 <p style={styles.desc}>{item.desc}</p>
                             </Col>

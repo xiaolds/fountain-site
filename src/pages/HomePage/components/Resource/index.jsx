@@ -13,11 +13,16 @@ export default class Resource extends Component {
         super(props);
         this.state = {
             index: 0,
-            activeKey:
-                (sessionStorage && sessionStorage.getItem('ty-fountain-service')) ||
-                (this.isServicePage() ? 'Fountain Design' : 'Home Fountain')
+            activeKey: this.setActiveKey()
         };
     }
+
+    setActiveKey = () => {
+        return (
+            (sessionStorage && sessionStorage.getItem('ty-fountain-service')) ||
+            (this.isServicePage() ? 'Fountain Design' : 'Home Fountain')
+        );
+    };
 
     isServicePage = () => {
         const hash = window.location.hash;
@@ -27,6 +32,15 @@ export default class Resource extends Component {
 
     componentDidMount() {
         this.ref.scrollIntoView();
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.location.search !== this.props.location.search) {
+            this.setState({
+                activeKey: this.setActiveKey()
+            });
+            this.ref.scrollIntoView();
+        }
     }
 
     renderPagination = total => {
@@ -51,6 +65,7 @@ export default class Resource extends Component {
     render() {
         const { index, activeKey } = this.state;
         const configData = this.isServicePage() ? config.data : config.productDatas;
+
         return (
             <div>
                 <Header />
@@ -59,6 +74,7 @@ export default class Resource extends Component {
                         <Tab
                             tabPosition="left"
                             shape="wrapped"
+                            animation={false}
                             onChange={this.onChange}
                             activeKey={activeKey}
                         >

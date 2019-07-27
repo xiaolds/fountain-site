@@ -36,7 +36,7 @@ export default class Introduction extends Component {
 const styles = {
     container: {
         margin: '0 auto',
-        padding: '80px 0'
+        padding: '80px 0 0'
     },
     title: {
         color: 'rgba(0,0,0,0.8)',
