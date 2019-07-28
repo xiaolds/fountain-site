@@ -20,7 +20,7 @@ export default class NormalLayout extends Component {
 
     render() {
         return (
-            <div className="main-wrapper">
+            <div className="main-wrapper minw-1200">
                 <Header />
                 <Switch>
                     {routerData.map((item, index) => {

@@ -134,6 +134,99 @@ const productDatas = [
     }
 ];
 
+
+
+const projectsData = [
+    {
+        title: 'Amazing Musical Dancing Fountain in the Greater Iqbal Park',
+        time: 2016,
+        location: 'Pakistan',
+        feature: '300M',
+        thumb: 'thumb-1',
+        imgs: ['pj1-1', 'pj1-2', 'pj1-3', 'pj1-4', 'pj1-5', 'pj1-7', 'pj1-6']
+    },
+    {
+        title: 'Laser Musical Fountain Show In Suzhou',
+        time: 2014,
+        location: 'China',
+        feature: '80m length x15m width',
+        thumb: 'thumb-2',
+        imgs: ['pj2-1', 'pj2-2', 'pj2-3', 'pj2-4', 'pj2-5', 'pj2-6']
+    },
+    {
+        title: 'Laser Musical Fountain Show In Shandong',
+        time: 2015,
+        location: 'China',
+        feature: '130m length X 30m width',
+        thumb: 'thumb-3',
+        imgs: ['pj3-1', 'pj3-2', 'pj3-3', 'pj3-4', 'pj3-5', 'pj3-6']
+    },
+    {
+        title: 'Musical dancing fountain in Malaysia',
+        time: 2017,
+        location: 'Malaysia',
+        feature: '',
+        thumb: 'thumb-4',
+        imgs: ['pj4-1', 'pj4-2', 'pj4-3', 'pj4-4', 'pj4-5']
+    },
+    {
+        title: 'Shanghai Bao Lian hotel',
+        time: 2017,
+        location: 'China',
+        feature: '',
+        thumb: 'thumb-5',
+        imgs: ['pj5-1', 'pj5-2', 'pj5-3', 'pj5-4', 'pj5-5', 'pj5-7', 'pj5-6']
+    },
+    {
+        title: 'Statue Water Fountain In Shanghai',
+        time: 2012,
+        location: 'China',
+        feature: '',
+        thumb: 'thumb-6',
+        imgs: ['pj6-1', 'pj6-2', 'pj6-3', 'pj6-4', 'pj6-5']
+    },
+    {
+        title: 'Water Fountains Project In China',
+        time: 2013,
+        location: 'China',
+        feature: '',
+        thumb: 'thumb-7',
+        imgs: ['pj7-1', 'pj7-2', 'pj7-3', 'pj7-4']
+    },
+    {
+        title: 'Water Fountain Project In Shanghai',
+        time: 2010,
+        location: 'China',
+        feature: '',
+        thumb: 'thumb-8',
+        imgs: ['pj8-1', 'pj8-2', 'pj8-3', 'pj8-4', 'pj8-5']
+    },
+    {
+        title: 'Water Fountains Project In Zhejiang',
+        time: 2011,
+        location: 'China',
+        feature: '',
+        thumb: 'thumb-9',
+        imgs: ['pj9-1', 'pj9-2', 'pj9-3', 'pj9-4', 'pj9-5', 'pj9-6', 'pj9-7', 'pj9-8']
+    },
+    {
+        title: 'Musical Fountain for 2018 APEC in PNG',
+        time: 2018,
+        location: 'Papua New Guinea',
+        feature: '40M',
+        thumb: 'thumb-10',
+        imgs: ['pj10-1', 'pj10-2', 'pj10-3', 'pj10-4', 'pj10-5', 'pj10-6', 'pj10-7', 'pj10-8', 'pj10-9', 'pj10-10']
+    },
+    {
+        title: 'Musical Fountain in Nicaragua',
+        time: 2018,
+        location: 'Nicaragua',
+        feature: '50M',
+        thumb: 'thumb-11',
+        imgs: ['pj11-1', 'pj11-2', 'pj11-3', 'pj11-4', 'pj11-5', 'pj11-6', 'pj11-7', 'pj11-8', 'pj11-9', 'pj11-10', 'pj11-11', 'pj11-12']
+    }
+];
+
 const navigation = [
     {
         title: 'Home',
@@ -151,30 +244,12 @@ const navigation = [
     },
     {
         title: 'Projects',
-        link: ''
+        link: 'project', 
+        location: projectsData[0].title
     },
     {
         title: 'About',
         link: 'contact'
-    }
-];
-
-const projectsData = [
-    {
-        title: 'Amazing Musical Dancing Fountain in the Greater Iqbal Park',
-        time: 2016,
-        location: 'Pakistan',
-        feature: '300M',
-        thumb: 'thumb-1',
-        imgs: ['hf-1', 'hf-2', 'hf-3', 'hf-4', 'hf-5', 'hf-7', 'hf-11', 'hf-13', 'hf-14']
-    },
-    {
-        title: 'Amazing Musical Dancing Fountain in the Greater Iqbal Park--2',
-        time: 2016,
-        location: 'Pakistan',
-        feature: '300M',
-        thumb: 'thumb-2',
-        imgs: []
     }
 ];
 

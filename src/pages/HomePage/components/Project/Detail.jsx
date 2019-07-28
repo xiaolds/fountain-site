@@ -1,10 +1,19 @@
 import React, { Component } from 'react';
+import { Grid } from '@alifd/next';
+
 import ProjectList from './index';
 import SwipeableViews from 'react-swipeable-views';
 
 import Header from '../../../../layouts/BlankLayout/components/Header';
 import Footer from '../../../../layouts/BlankLayout/components/Footer';
 import config from '../../../../common/config';
+
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLocationArrow } from '@fortawesome/free-solid-svg-icons/faLocationArrow';
+import { faClock } from '@fortawesome/free-solid-svg-icons/faClock';
+import { faPalette } from '@fortawesome/free-solid-svg-icons/faPalette';
+
+const { Row, Col } = Grid;
 
 export default class ProjectDetail extends Component {
     static displayName = 'ProjectDetail';
@@ -25,7 +34,7 @@ export default class ProjectDetail extends Component {
         );
     };
 
-    getShowData = (activeKey) => {
+    getShowData = activeKey => {
         return config.projectsData.filter(item => item.title === activeKey)[0] || {};
     };
 
@@ -62,12 +71,12 @@ export default class ProjectDetail extends Component {
         this.setState({ index: 0, activeKey });
     };
 
-    setProps = (activeKey) => {
+    setProps = activeKey => {
         if (activeKey !== this.activeKey) {
             this.activeKey = activeKey;
-            this.setState({showData: this.getShowData(this.activeKey)})
+            this.setState({ showData: this.getShowData(this.activeKey), index: 0 });
         }
-    }
+    };
 
     render() {
         const { index, activeKey, showData } = this.state;
@@ -79,6 +88,23 @@ export default class ProjectDetail extends Component {
                 <div>
                     <div className="project-head light-bg" ref={el => (this.ref = el)}>
                         <span className="project-title">{showData.title}</span>
+
+                        <Row wrap className="w960 main-wrapper mt16">
+                            <Col xxs="12" s="8" l="8">
+                                <FontAwesomeIcon icon={faClock} className="icon" />
+                                <span className="ft16">{showData.time}</span>
+                            </Col>
+                            <Col xxs="12" s="8" l="8">
+                                <FontAwesomeIcon icon={faLocationArrow} className="icon" />
+                                <span className="ft16">{showData.location}</span>
+                            </Col>
+                            {showData.feature && (
+                                <Col xxs="12" s="8" l="8">
+                                    <FontAwesomeIcon icon={faPalette} className="icon" />
+                                    <span className="ft16">{showData.feature}</span>
+                                </Col>
+                            )}
+                        </Row>
                     </div>
                     <div className="project-content">
                         <SwipeableViews
@@ -93,7 +119,7 @@ export default class ProjectDetail extends Component {
                         <div className="pagination">{this.renderPagination(imgs.length)}</div>
                     </div>
                 </div>
-                <ProjectList setProps={this.setProps}/>
+                <ProjectList setProps={this.setProps} />
                 <Footer />
             </div>
         );

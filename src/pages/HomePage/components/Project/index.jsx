@@ -40,7 +40,7 @@ export default class Feature extends Component {
 
     goServiceDetail = title => {
         this.handleGoService(title || config.projectsData[0].title);
-        
+
         const { setProps } = this.props;
         if (setProps) {
             setProps(title);
@@ -54,19 +54,22 @@ export default class Feature extends Component {
         const dataSource = config.projectsData;
         return (
             <div className="pt100">
-                <p className="page-title" onClick={this.goServiceDetail}>
+                <p className="page-title" onClick={()=>this.goServiceDetail()}>
                     Recent Projects
                 </p>
                 <div style={styles.container}>
                     <div style={styles.silder} className="w1200 main-wrapper">
                         {dataSource.map((item, index) => {
                             return (
-                                <div
-                                    key={index}
-                                    style={styles.item}
-                                    className={`${item.thumb}`}
-                                    onClick={() => this.goServiceDetail(item.title)}
-                                />
+                                <span className="dib" style={styles.wrapper}>
+                                    <div
+                                        key={index}
+                                        style={styles.item}
+                                        className={`${item.thumb}`}
+                                        onClick={() => this.goServiceDetail(item.title)}
+                                    />
+                                    <h3 style={styles.title}>{item.title}</h3>
+                                </span>
                             );
                         })}
                     </div>
@@ -81,14 +84,17 @@ const styles = {
         padding: '80px 0',
         background: '#F6F7F9'
     },
-    content: {
-        margin: '0 auto'
+    wrapper: {
+        width: '260px',
+        margin: '10px',
+        verticalAlign: 'top'
+    },
+    title: {
+        whiteSpace: 'normal'
     },
     item: {
         width: '260px',
-        height: '220px',
-        margin: '10px',
-        display: 'inline-block'
+        height: '220px'
     },
     silder: {
         overflowX: 'auto',
