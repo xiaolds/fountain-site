@@ -104,8 +104,8 @@
 }
 
 .service-detail-slider {
-    height: 400px;
-    width: 640px;
+    height: 600px;
+    width: 800px;
     margin: 0 auto;
 }
 
@@ -738,6 +738,7 @@
     margin: 0 auto;
     width: 1200px;
     min-height: 700px;
+    position: relative;
 }
 
 @mixin full-width {
@@ -857,8 +858,8 @@
     height: 40px;
     border: 3px solid transparent;
     transform: rotate(45deg);
-    #{$border-1}:  3px solid $clr;
-    #{$border-2}:  3px solid $clr;
+    #{$border-1}: 3px solid $clr;
+    #{$border-2}: 3px solid $clr;
 }
 
 .next-icon {
@@ -876,6 +877,19 @@
         left: 10px;
         @include icon-after(border-bottom, border-left, #3080fe);
     }
+}
+
+.map-wrapper {
+    height: 513px;
+    width: 1920;
+    margin: 0 auto;
+}
+
+.contact-wrapper {
+    position: absolute;
+    left: 10px;
+    top: 450px;
+    width: 200px;
 }
 
 // mobile style

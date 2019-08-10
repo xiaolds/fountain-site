@@ -1,9 +1,15 @@
+import React from 'react';
 import { faPalette } from '@fortawesome/free-solid-svg-icons/faPalette';
 import { faIndustry } from '@fortawesome/free-solid-svg-icons/faIndustry';
 import { faTools } from '@fortawesome/free-solid-svg-icons/faTools';
 import { faToolbox } from '@fortawesome/free-solid-svg-icons/faToolbox';
 import { faPeopleCarry } from '@fortawesome/free-solid-svg-icons/faPeopleCarry';
 import { faHeadset } from '@fortawesome/free-solid-svg-icons/faHeadset';
+
+import { faLocationArrow } from '@fortawesome/free-solid-svg-icons/faLocationArrow';
+import { faEnvelope } from '@fortawesome/free-solid-svg-icons/faEnvelope';
+import { faPhoneAlt } from '@fortawesome/free-solid-svg-icons/faPhoneAlt';
+import { faClock } from '@fortawesome/free-solid-svg-icons/faClock';
 
 const data = [
     {
@@ -134,8 +140,6 @@ const productDatas = [
     }
 ];
 
-
-
 const projectsData = [
     {
         title: 'Amazing Musical Dancing Fountain in the Greater Iqbal Park',
@@ -215,7 +219,18 @@ const projectsData = [
         location: 'Papua New Guinea',
         feature: '40M',
         thumb: 'thumb-10',
-        imgs: ['pj10-1', 'pj10-2', 'pj10-3', 'pj10-4', 'pj10-5', 'pj10-6', 'pj10-7', 'pj10-8', 'pj10-9', 'pj10-10']
+        imgs: [
+            'pj10-1',
+            'pj10-2',
+            'pj10-3',
+            'pj10-4',
+            'pj10-5',
+            'pj10-6',
+            'pj10-7',
+            'pj10-8',
+            'pj10-9',
+            'pj10-10'
+        ]
     },
     {
         title: 'Musical Fountain in Nicaragua',
@@ -223,33 +238,84 @@ const projectsData = [
         location: 'Nicaragua',
         feature: '50M',
         thumb: 'thumb-11',
-        imgs: ['pj11-1', 'pj11-2', 'pj11-3', 'pj11-4', 'pj11-5', 'pj11-6', 'pj11-7', 'pj11-8', 'pj11-9', 'pj11-10', 'pj11-11', 'pj11-12']
+        imgs: [
+            'pj11-1',
+            'pj11-2',
+            'pj11-3',
+            'pj11-4',
+            'pj11-5',
+            'pj11-6',
+            'pj11-7',
+            'pj11-8',
+            'pj11-9',
+            'pj11-10',
+            'pj11-11',
+            'pj11-12'
+        ]
     }
 ];
 
 const navigation = [
     {
-        title: 'Home',
+        title: 'HOME',
         link: ''
     },
     {
-        title: 'Products',
+        title: 'PRODUCTS',
         link: 'service?products',
         location: productDatas[0].title
     },
     {
-        title: 'Services',
+        title: 'SERVICES',
         link: 'service?solutions',
         location: data[0].title
     },
     {
-        title: 'Projects',
-        link: 'project', 
+        title: 'PROJECTS',
+        link: 'project',
         location: projectsData[0].title
     },
     {
-        title: 'About',
+        title: 'ABOUT',
+        link: 'about'
+    },
+    {
+        title: 'CONTACT US',
         link: 'contact'
+    }
+];
+
+const ContactData = [
+    {
+        title: 'ADDRESS',
+        pic: faLocationArrow,
+        // desc: 'Room 3H, No. 588 Yingkou Rd, Yangpu Dist., Shanghai, China.',
+        render: () => (
+            <a
+                class="fusion-no-lightbox"
+                href="https://goo.gl/maps/mCGrmET79N12"
+                target="_blank"
+                aria-label="contact-map"
+                rel="noopener noreferrer"
+            >Room 3H, No. 588 Yingkou Rd, Yangpu Dist., Shanghai, China.</a>
+        ),
+        ignore: true
+    },
+    {
+        title: 'EMAIL',
+        pic: faEnvelope,
+        // desc: 'tongyi@mail.com',
+        render: () => <a href="mailto:info@tyfountain.com">info@tyfountain.com</a>
+    },
+    {
+        title: 'PHONE',
+        pic: faPhoneAlt,
+        desc: '+86 1881234567'
+    },
+    {
+        title: 'TIME',
+        pic: faClock,
+        desc: 'Workday 9am ~ 5pm'
     }
 ];
 
@@ -257,5 +323,6 @@ export default {
     data,
     productDatas,
     navigation,
-    projectsData
+    projectsData,
+    ContactData
 };

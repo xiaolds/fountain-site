@@ -5,25 +5,29 @@ import styles from './index.module.scss';
 
 const MENUS = [
     {
-        name: 'Home',
+        name: 'HOME',
         path: '#index'
     },
     {
-        name: 'Products',
+        name: 'PRODUCTS',
         path: '#service?products'
     },
     {
-        name: 'Services',
+        name: 'SERVICES',
         path: '#service?solutions'
     },
     {
-        name: 'Projects',
+        name: 'PROJECTS',
         path: '#project'
     },
     {
-        name: 'About',
+        name: 'ABOUT',
         path: '#about'
-    }
+    },
+    {
+        name: 'CONTACT US',
+        path: '#contact'
+    },
 ];
 
 export default class Header extends Component {

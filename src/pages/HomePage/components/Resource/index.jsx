@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Tab } from '@alifd/next';
 import SwipeableViews from 'react-swipeable-views';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import Header from '../../../../layouts/BlankLayout/components/Header';
 import Footer from '../../../../layouts/BlankLayout/components/Footer';
@@ -62,31 +63,31 @@ export default class Resource extends Component {
         this.setState({ index: 0, activeKey });
     };
 
-    toNext = (len) => {
+    toNext = len => {
         const { index } = this.state;
-        if (index === len -1) {
-            this.setState({index: 0})
+        if (index === len - 1) {
+            this.setState({ index: 0 });
         } else {
-            this.setState({index: index + 1})
+            this.setState({ index: index + 1 });
         }
-    }
+    };
 
-    toPre = (len) => {
+    toPre = len => {
         const { index } = this.state;
         if (index === 0) {
-            this.setState({index: len -1})
+            this.setState({ index: len - 1 });
         } else {
-            this.setState({index: index - 1})
+            this.setState({ index: index - 1 });
         }
-    }
+    };
 
     getData = () => {
         return this.isServicePage() ? config.data : config.productDatas;
-    }
+    };
 
     render() {
         const { index, activeKey } = this.state;
-        const configData = this.getData()
+        const configData = this.getData();
 
         return (
             <div>
@@ -119,8 +120,14 @@ export default class Resource extends Component {
                                                 />
                                             ))}
                                         </SwipeableViews>
-                                        <div className="pre-icon" onClick={() =>this.toPre(item.imgs.length)} />
-                                        <div className="next-icon" onClick={()=>this.toNext(item.imgs.length)} />
+                                        <div
+                                            className="pre-icon"
+                                            onClick={() => this.toPre(item.imgs.length)}
+                                        />
+                                        <div
+                                            className="next-icon"
+                                            onClick={() => this.toNext(item.imgs.length)}
+                                        />
                                     </div>
 
                                     <div className="pagination">
@@ -133,6 +140,25 @@ export default class Resource extends Component {
                                 </Tab.Item>
                             ))}
                         </Tab>
+                        <div className="contact-wrapper">
+                            {config.ContactData.map(item => {
+                                return (
+                                    !item.ignore && (
+                                        <p>
+                                            <FontAwesomeIcon icon={item.pic} className="icon" />
+                                            {item.desc && (
+                                                <span className="contact-desc">{item.desc}</span>
+                                            )}
+                                            {item.render && (
+                                                <span className="contact-render">
+                                                    {item.render()}
+                                                </span>
+                                            )}
+                                        </p>
+                                    )
+                                );
+                            })}
+                        </div>
                     </div>
                 </div>
                 <Footer />

@@ -16,8 +16,8 @@ export default class Introduction extends Component {
     render() {
         return (
             <div style={styles.container}>
-                <p className="page-title" onClick={this.goServiceDetail}>About T.Y. Fountain</p>
-                <div className="contact-bg">
+                <p className="page-title" onClick={this.goServiceDetail}>CONTACT US</p>
+                <div className="contact-bg" onClick={this.goServiceDetail}>
                     <div className="w1200 main-wrapper">
                         <h1 className="contact-txt">
                             {`The BEST FOUNTAIN EXPERTS  
