@@ -2,7 +2,7 @@
   max-width: 1200px;
   min-width: 1200px;
   margin: 0 auto;
-  height: 600px;
+  height: 400px;
   * {
     transition: all .2s linear;
   }
@@ -27,10 +27,8 @@
     }
     .hy-friends-img {
       position: relative;
-      width: 1200px;
+      width: 938px;
       height: 100%;
-      left: 50%;
-      margin-left: -600px;
       &.pro1 {
         background-image: url('./images/pro1.png');
         background-size: contain;
@@ -41,11 +39,11 @@
       }
       &.pro3 {
         background-image: url('./images/pro3.png');
-        background-size: cover;
+        background-size: contain;
       }
       &.pro4 {
-        background-image: url('./images/pro4.jpg');
-        background-size: cover;
+        background-image: url('./images/pro4.png');
+        background-size: contain;
       }
     }
     h4 {

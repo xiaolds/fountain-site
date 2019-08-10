@@ -87,7 +87,8 @@ const styles = {
     wrapper: {
         width: '260px',
         margin: '10px',
-        verticalAlign: 'top'
+        verticalAlign: 'top',
+        cursor: 'pointer'
     },
     title: {
         whiteSpace: 'normal'

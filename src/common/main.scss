@@ -11,6 +11,10 @@
     min-width: 1200px;
 }
 
+.w1300 {
+    width: 1300px;
+}
+
 .w960 {
     width: 960px;
 }
@@ -732,7 +736,7 @@
 
 .tab-wrapper {
     margin: 0 auto;
-    width: 900px;
+    width: 1200px;
     min-height: 700px;
 }
 
@@ -762,7 +766,7 @@
         position: absolute;
         width: 80px;
         background-color: $color-brand1-6;
-        left: 0
+        left: 0;
     }
 }
 
@@ -817,11 +821,61 @@
 }
 
 .mt16 {
-    margin-top: 16px
+    margin-top: 16px;
 }
 
 .dib {
     display: inline-block;
+}
+
+.custom-tab-item {
+    width: 200px;
+    padding: 10px;
+}
+
+.slider-wrapper {
+    position: relative;
+}
+
+@mixin slider-icon {
+    width: 50px;
+    height: 50px;
+    z-index: 10000;
+    top: 50%;
+    margin-top: -25px;
+    position: absolute;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+@mixin icon-after($border-1, $border-2, $clr) {
+    content: '';
+    position: absolute;
+    top: 50%;
+    margin-top: -16px;
+    width: 40px;
+    height: 40px;
+    border: 3px solid transparent;
+    transform: rotate(45deg);
+    #{$border-1}:  3px solid $clr;
+    #{$border-2}:  3px solid $clr;
+}
+
+.next-icon {
+    @include slider-icon;
+    right: 10px;
+    &::after {
+        @include icon-after(border-top, border-right, #3080fe);
+    }
+}
+
+.pre-icon {
+    @include slider-icon;
+    left: 10px;
+    &::after {
+        left: 10px;
+        @include icon-after(border-bottom, border-left, #3080fe);
+    }
 }
 
 // mobile style

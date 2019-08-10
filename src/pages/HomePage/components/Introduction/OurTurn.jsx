@@ -9,8 +9,10 @@ export default function OurTurn() {
                 Sometimes we forget the significance of water. That taught us about how we exist.
             </p>
             <p style={styles.desc} className="fw-6">
-                Reminds us of the marvels we created. And the impacts that we have made. Water
-                surrounds all around us. Shaping the world we live. It’s not just an element that we
+                Reminds us of the marvels we created. And the impacts that we have made.
+            </p>
+            <p style={styles.desc} className="fw-6">
+                Water surrounds all around us. Shaping the world we live. It’s not just an element that we
                 relied on.
             </p>
             <p style={styles.desc} className="fw-6">

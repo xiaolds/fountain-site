@@ -43,7 +43,6 @@ export default class ProjectDetail extends Component {
     }
 
     componentWillReceiveProps(nextProps) {
-        console.log(nextProps);
         if (nextProps.location.search !== this.props.location.search) {
             this.setState({
                 activeKey: this.setActiveKey()
@@ -67,21 +66,37 @@ export default class ProjectDetail extends Component {
         });
     };
 
-    onChange = activeKey => {
-        this.setState({ index: 0, activeKey });
-    };
-
     setProps = activeKey => {
         if (activeKey !== this.activeKey) {
             this.activeKey = activeKey;
             this.setState({ showData: this.getShowData(this.activeKey), index: 0 });
         }
+        this.ref.scrollIntoView();
+    };
+
+    toNext = len => {
+        const { index } = this.state;
+        if (index === len - 1) {
+            this.setState({ index: 0 });
+        } else {
+            this.setState({ index: index + 1 });
+        }
+    };
+
+    toPre = len => {
+        const { index } = this.state;
+        if (index === 0) {
+            this.setState({ index: len - 1 });
+        } else {
+            this.setState({ index: index - 1 });
+        }
     };
 
     render() {
-        const { index, activeKey, showData } = this.state;
+        const { index, showData } = this.state;
         const imgs = showData.imgs || [];
-        console.log(imgs);
+        const len = imgs.length;
+
         return (
             <div>
                 <Header />
@@ -107,16 +122,20 @@ export default class ProjectDetail extends Component {
                         </Row>
                     </div>
                     <div className="project-content">
-                        <SwipeableViews
-                            index={index}
-                            containerStyle={{ height: '100%' }}
-                            className="project-detail-slider"
-                        >
-                            {imgs.map(img => (
-                                <div key={img} className={`service-detail-img ${img}`} />
-                            ))}
-                        </SwipeableViews>
-                        <div className="pagination">{this.renderPagination(imgs.length)}</div>
+                        <div className="slider-wrapper w1300 main-wrapper">
+                            <SwipeableViews
+                                index={index}
+                                containerStyle={{ height: '100%' }}
+                                className="project-detail-slider"
+                            >
+                                {imgs.map(img => (
+                                    <div key={img} className={`service-detail-img ${img}`} />
+                                ))}
+                            </SwipeableViews>
+                            <div className="pre-icon" onClick={() => this.toPre(len)} />
+                            <div className="next-icon" onClick={() => this.toNext(len)} />
+                            <div className="pagination">{this.renderPagination(imgs.length)}</div>
+                        </div>
                     </div>
                 </div>
                 <ProjectList setProps={this.setProps} />

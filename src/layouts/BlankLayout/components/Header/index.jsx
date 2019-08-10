@@ -10,11 +10,15 @@ const MENUS = [
     },
     {
         name: 'Products',
-        path: '#products'
+        path: '#service?products'
     },
     {
         name: 'Services',
-        path: '#services'
+        path: '#service?solutions'
+    },
+    {
+        name: 'Projects',
+        path: '#project'
     },
     {
         name: 'About',

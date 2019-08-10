@@ -28,7 +28,7 @@ export default class SlideBanner extends Component {
     };
 
     handleGoService = title => {
-        sessionStorage && sessionStorage.setItem('ty-fountain-service', title);
+        sessionStorage && sessionStorage.setItem('ty-fountain-product', title);
     };
 
     goServiceDetail = () => {

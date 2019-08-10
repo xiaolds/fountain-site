@@ -33,12 +33,24 @@ const dataSource = [
     }
 ];
 
-const handleGoService = title => {
-    sessionStorage && sessionStorage.setItem('ty-fountain-service', title);
+const handleGoService = (title, pageType) => {
+    sessionStorage && sessionStorage.setItem(pageType, title);
+};
+
+const getPageType = title => {
+    switch (title) {
+        case 'Products':
+            return 'ty-fountain-product';
+        case 'Services':
+            return 'ty-fountain-service';
+        case 'Projects':
+            return 'ty-fountain-project';
+    }
 };
 
 const goNavPage = item => {
-    item.location && handleGoService(item.location);
+    const pageType = getPageType(item.title);
+    item.location && handleGoService(item.location, pageType);
     const origin = window.location.origin;
     window.location.href = `${origin}/#/${item.link}`;
 };
@@ -70,8 +82,8 @@ const Footer = () => {
                         {config.navigation.map(item => (
                             <p className="footer-nav" onClick={() => goNavPage(item)}>
                                 {/* <a  href={item.link}> */}
-                                    <span>> &nbsp;</span>
-                                    <span>{item.title}</span>
+                                <span>> &nbsp;</span>
+                                <span>{item.title}</span>
                                 {/* </a> */}
                             </p>
                         ))}

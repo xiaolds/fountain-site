@@ -18,10 +18,9 @@ export default class Resource extends Component {
     }
 
     setActiveKey = () => {
-        return (
-            (sessionStorage && sessionStorage.getItem('ty-fountain-service')) ||
-            (this.isServicePage() ? 'Fountain Design' : 'Home Fountain')
-        );
+        const pageType = this.isServicePage() ? 'ty-fountain-service' : 'ty-fountain-product';
+        const defaultKey = this.isServicePage() ? 'Fountain Design' : 'Home Fountain';
+        return (sessionStorage && sessionStorage.getItem(pageType)) || defaultKey;
     };
 
     isServicePage = () => {
@@ -37,7 +36,8 @@ export default class Resource extends Component {
     componentWillReceiveProps(nextProps) {
         if (nextProps.location.search !== this.props.location.search) {
             this.setState({
-                activeKey: this.setActiveKey()
+                activeKey: this.setActiveKey(),
+                index: 0
             });
             this.ref.scrollIntoView();
         }
@@ -62,9 +62,31 @@ export default class Resource extends Component {
         this.setState({ index: 0, activeKey });
     };
 
+    toNext = (len) => {
+        const { index } = this.state;
+        if (index === len -1) {
+            this.setState({index: 0})
+        } else {
+            this.setState({index: index + 1})
+        }
+    }
+
+    toPre = (len) => {
+        const { index } = this.state;
+        if (index === 0) {
+            this.setState({index: len -1})
+        } else {
+            this.setState({index: index - 1})
+        }
+    }
+
+    getData = () => {
+        return this.isServicePage() ? config.data : config.productDatas;
+    }
+
     render() {
         const { index, activeKey } = this.state;
-        const configData = this.isServicePage() ? config.data : config.productDatas;
+        const configData = this.getData()
 
         return (
             <div>
@@ -79,19 +101,28 @@ export default class Resource extends Component {
                             activeKey={activeKey}
                         >
                             {configData.map(item => (
-                                <Tab.Item title={item.title} key={item.title}>
-                                    <SwipeableViews
-                                        index={index}
-                                        containerStyle={{ height: '100%' }}
-                                        className="service-detail-slider"
-                                    >
-                                        {item.imgs.map(img => (
-                                            <div
-                                                key={img}
-                                                className={`service-detail-img ${img}`}
-                                            />
-                                        ))}
-                                    </SwipeableViews>
+                                <Tab.Item
+                                    title={item.title}
+                                    key={item.title}
+                                    className="custom-tab-item"
+                                >
+                                    <div className="slider-wrapper">
+                                        <SwipeableViews
+                                            index={index}
+                                            containerStyle={{ height: '100%' }}
+                                            className="service-detail-slider"
+                                        >
+                                            {item.imgs.map(img => (
+                                                <div
+                                                    key={img}
+                                                    className={`service-detail-img ${img}`}
+                                                />
+                                            ))}
+                                        </SwipeableViews>
+                                        <div className="pre-icon" onClick={() =>this.toPre(item.imgs.length)} />
+                                        <div className="next-icon" onClick={()=>this.toNext(item.imgs.length)} />
+                                    </div>
+
                                     <div className="pagination">
                                         {this.renderPagination(item.imgs.length)}
                                     </div>
