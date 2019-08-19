@@ -305,12 +305,12 @@ const ContactData = [
         title: 'EMAIL',
         pic: faEnvelope,
         // desc: 'tongyi@mail.com',
-        render: () => <a href="mailto:info@tyfountain.com">info@tyfountain.com</a>
+        render: () => <a href="mailto:sales@tyfountain.com">sales@tyfountain.com</a>
     },
     {
         title: 'PHONE',
         pic: faPhoneAlt,
-        desc: '+86 1881234567'
+        desc: '+86 15901926288'
     },
     {
         title: 'TIME',
