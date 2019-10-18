@@ -292,7 +292,7 @@ const ContactData = [
         // desc: 'Room 3H, No. 588 Yingkou Rd, Yangpu Dist., Shanghai, China.',
         render: () => (
             <a
-                class="fusion-no-lightbox"
+                // class="fusion-no-lightbox"
                 href="https://goo.gl/maps/mCGrmET79N12"
                 target="_blank"
                 aria-label="contact-map"

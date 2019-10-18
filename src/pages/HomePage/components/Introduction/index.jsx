@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import SendEmail from '../SendEmail';
 
 export default class Introduction extends Component {
     static displayName = 'Introduction';
@@ -16,7 +17,10 @@ export default class Introduction extends Component {
     render() {
         return (
             <div style={styles.container}>
-                <p className="page-title" onClick={this.goServiceDetail}>CONTACT US</p>
+                <p className="page-title" onClick={this.goServiceDetail}>
+                    CONTACT US
+                </p>
+                <SendEmail></SendEmail>
                 <div className="contact-bg" onClick={this.goServiceDetail}>
                     <div className="w1200 main-wrapper">
                         <h1 className="contact-txt">

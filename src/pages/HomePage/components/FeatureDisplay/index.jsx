@@ -6,7 +6,7 @@ import config from '../../../../common/config';
 
 const { Row, Col } = Grid;
 
-export default class FeatureDisplayFeatureDisplay extends Component {
+export default class FeatureDisplay extends Component {
     static displayName = 'FeatureDisplay';
 
     static propTypes = {};

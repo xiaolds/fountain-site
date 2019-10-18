@@ -3,6 +3,7 @@ import React, { Component } from 'react';
 import Header from '../../../../layouts/BlankLayout/components/Header';
 import Footer from '../../../../layouts/BlankLayout/components/Footer';
 import Feature from '../Feature';
+import SendEmail from '../SendEmail';
 
 export default class Contact extends Component {
     static displayName = 'Contact';
@@ -18,9 +19,11 @@ export default class Contact extends Component {
                 <div className="project-head light-bg" ref={el => (this.ref = el)}>
                     <span className="project-title">CONTACT US</span>
                 </div>
+                <SendEmail></SendEmail>
+                <Feature />
                 <div className="map-wrapper">
                     <a
-                        class="fusion-no-lightbox"
+                        // class="fusion-no-lightbox"
                         href="https://goo.gl/maps/mCGrmET79N12"
                         target="_blank"
                         aria-label="contact-map"
@@ -39,7 +42,6 @@ export default class Contact extends Component {
                         />
                     </a>
                 </div>
-                <Feature />
                 <Footer />
             </div>
         );
