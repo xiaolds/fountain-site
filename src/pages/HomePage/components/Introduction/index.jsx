@@ -20,7 +20,7 @@ export default class Introduction extends Component {
                 <p className="page-title" onClick={this.goServiceDetail}>
                     CONTACT US
                 </p>
-                <SendEmail></SendEmail>
+                {/* <SendEmail></SendEmail> */}
                 <div className="contact-bg" onClick={this.goServiceDetail}>
                     <div className="w1200 main-wrapper">
                         <h1 className="contact-txt">
