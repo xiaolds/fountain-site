@@ -19,7 +19,7 @@ export default class Contact extends Component {
                 <div className="project-head light-bg" ref={el => (this.ref = el)}>
                     <span className="project-title">CONTACT US</span>
                 </div>
-                {/* <SendEmail></SendEmail> */}
+                <SendEmail></SendEmail>
                 <Feature />
                 <div className="map-wrapper">
                     <a

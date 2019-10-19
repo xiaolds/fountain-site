@@ -33,7 +33,8 @@ class SendEmail extends React.Component {
 
         if (this.check()) {
             this.setState({ btnTxt: 'Loading...' });
-            fetch('http://47.97.118.7:3001/sendemail', {
+            fetch('https://fast.fountain-site.top/sendemail', {
+            // fetch('http://localhost:3001/sendemail', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
