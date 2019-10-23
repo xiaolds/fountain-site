@@ -29,17 +29,25 @@ class SendEmail extends React.Component {
     handleSubmit = () => {
         this.setState({ submit: true });
         const { name, email, mobile, content } = this.state;
+        const params = { name, email, mobile, content };
         console.log(name, email, mobile, content);
 
         if (this.check()) {
             this.setState({ btnTxt: 'Loading...' });
-            fetch('https://fast.fountain-site.top/sendemail', {
+            // fetch('https://fast.fountain-site.top/sendemail', {
             // fetch('http://localhost:3001/sendemail', {
+            fetch('http://47.97.118.7:3001/sendemail', {
                 method: 'POST',
                 headers: {
-                    'Content-Type': 'application/json'
+                    // 'Content-Type': 'application/json'
+                    'Content-Type': 'application/x-www-form-urlencoded'
                 },
-                body: JSON.stringify({ name, email, mobile, content })
+                // body: JSON.stringify({ name, email, mobile, content })
+                body: Object.keys(params)
+                    .map(key => {
+                        return encodeURIComponent(key) + '=' + encodeURIComponent(params[key]);
+                    })
+                    .join('&')
             })
                 .then(r => r.text())
                 .then(data => {
