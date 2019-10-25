@@ -1,7 +1,7 @@
 import React from 'react';
 import fetch from 'isomorphic-unfetch';
 import './main.scss';
-
+// https://script.google.com/macros/s/AKfycbwxOYiZ_migcANi7P0rztSY8-ebKgcebsSShQBDng/exec
 class SendEmail extends React.Component {
     constructor(props) {
         super(props);
@@ -34,24 +34,29 @@ class SendEmail extends React.Component {
 
         if (this.check()) {
             this.setState({ btnTxt: 'Loading...' });
-            fetch('https://fast.fountain-site.top/sendemail', {
-            // fetch('http://localhost:3001/sendemail', {
-            // fetch('http://47.97.118.7:3001/sendemail', {
-                method: 'POST',
-                headers: {
-                    // 'Content-Type': 'application/json'
-                    'Content-Type': 'application/x-www-form-urlencoded'
-                },
-                // body: JSON.stringify({ name, email, mobile, content })
-                body: Object.keys(params)
-                    .map(key => {
-                        return encodeURIComponent(key) + '=' + encodeURIComponent(params[key]);
-                    })
-                    .join('&')
-            })
+            // fetch('https://fast.fountain-site.top/sendemail', {
+            fetch(
+                'https://script.google.com/macros/s/AKfycbwxOYiZ_migcANi7P0rztSY8-ebKgcebsSShQBDng/exec',
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/x-www-form-urlencoded'
+                    },
+                    body: Object.keys(params)
+                        .map(key => {
+                            return encodeURIComponent(key) + '=' + encodeURIComponent(params[key]);
+                        })
+                        .join('&')
+                }
+            )
                 .then(r => r.text())
                 .then(data => {
-                    this.setState({ btnTxt: JSON.parse(data).msg });
+                    const resultData = JSON.parse(data);
+                    if (resultData.result === 'success') {
+                        this.setState({ btnTxt: 'Send Email Successfully!' });
+                    } else {
+                        this.setState({ btnTxt: 'Slow network, try again later~' });
+                    }
                 });
         }
     };
